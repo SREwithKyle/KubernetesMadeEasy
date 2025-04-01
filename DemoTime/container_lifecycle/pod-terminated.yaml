@@ -1,0 +1,10 @@
+# pod-terminated.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-terminated
+spec:
+  containers:
+  - name: terminated-container
+    image: busybox
+    command: ["sh", "-c", "echo Finished; exit 0"]

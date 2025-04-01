@@ -1,0 +1,10 @@
+# pod-running.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-running
+spec:
+  containers:
+  - name: running-container
+    image: busybox
+    command: ["sh", "-c", "while true; do echo Running...; sleep 5; done"]

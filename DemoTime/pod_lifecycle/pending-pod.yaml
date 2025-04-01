@@ -1,0 +1,13 @@
+# pending-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pending-pod
+spec:
+  containers:
+  - name: busybox
+    image: busybox
+    command: ["sleep", "3600"]
+    resources:
+      requests:
+        cpu: "100"

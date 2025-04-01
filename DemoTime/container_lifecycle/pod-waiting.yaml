@@ -1,0 +1,10 @@
+# pod-waiting.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-waiting
+spec:
+  containers:
+  - name: waiting-container
+    image: busybox1234  # non-existent image
+    command: ["sh", "-c", "echo Should never reach here"]

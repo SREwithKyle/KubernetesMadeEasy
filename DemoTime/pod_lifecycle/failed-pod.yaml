@@ -1,0 +1,10 @@
+# failed-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: failed-pod
+spec:
+  containers:
+  - name: busybox
+    image: busybox
+    command: ["false"]
