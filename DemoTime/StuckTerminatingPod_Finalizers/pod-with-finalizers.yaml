@@ -1,0 +1,15 @@
+# pod-with-finalizer.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: finalizer-pod
+  namespace: default
+  finalizers:
+    - demo.kyle/finalizer
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+
+# kubectl get pod finalizer-pod -o json | jq '.metadata.finalizers'
+# kubectl patch pod finalizer-pod -p '{"metadata":{"finalizers":[]}}' --type=merge
