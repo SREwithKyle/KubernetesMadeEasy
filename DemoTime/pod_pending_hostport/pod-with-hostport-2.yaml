@@ -1,0 +1,12 @@
+# pod-with-hostport-2.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hostport-pod-2
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    ports:
+    - containerPort: 80
+      hostPort: 8080

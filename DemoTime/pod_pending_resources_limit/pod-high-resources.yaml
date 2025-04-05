@@ -1,0 +1,13 @@
+# pod-high-resources.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: high-memory-pod
+spec:
+  containers:
+  - name: memory-hog
+    image: nginx
+    resources:
+      requests:
+        memory: "5Gi"
+        cpu: "2000m"
